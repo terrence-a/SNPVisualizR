@@ -20,6 +20,3 @@ postion colored by filter}
 \description{
 Function which plots the variants by their position on the chromosome.
 }
-\references{
-
-}
