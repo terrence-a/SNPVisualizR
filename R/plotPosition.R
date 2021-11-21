@@ -17,8 +17,6 @@
 #' )
 #' plotPosition(vcfData)
 #'
-#' @references
-#'
 #' @export
 #' @import ggplot2
 #'
