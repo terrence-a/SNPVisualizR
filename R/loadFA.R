@@ -6,7 +6,7 @@
 #'
 #' @return an faObj containing the sequence data.
 #'
-#' @export
+#' @export loadFa
 #' @import methods
 #' @import data.table
 #' @import seqinr

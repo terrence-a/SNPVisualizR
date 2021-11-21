@@ -2,6 +2,7 @@
 
 export()
 export(calculateTiTv)
+export(loadFa)
 export(loadVCF)
 export(plotPosition)
 import(data.table)
