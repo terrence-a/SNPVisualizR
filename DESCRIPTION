@@ -1,12 +1,18 @@
 Package: SNPVisualizR
 Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: 
     person("Terrence", "Amponsah", , "terrence.amponsah@mail.utoronto.ca", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
 Description: What the package does (one paragraph).
 License: MIT + file LICENSE
+Depends: R (>= 3.1.0)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
-Depends: R (>= 3.1.0)
+Imports: 
+    ggplot2,
+    data.table,
+    methods,
+    seqinr,
+    magrittr
