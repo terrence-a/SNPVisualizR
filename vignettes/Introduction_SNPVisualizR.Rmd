@@ -1,0 +1,51 @@
+---
+title: "Introduction"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction_SNPVisualizR}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+## Introduction
+
+`SNPVisualizR` is an R package developed for the integration analysis and visualization of genetic variation data from vcf files.
+
+To download **SNPVisualizR** please use the following commands:
+
+```{r}
+require("devtools")
+install_github("terrence-a/SNPVisualizR", build_vignettes = TRUE)
+library(SNPVisualizR)
+```
+
+The following command lists all the sample functions available as a part of this package.
+
+``` {r}
+ls("package:TestingPackage")
+```
+
+##Components
+###Available Functions
+1. **loadVCF**
+The **loadVCF* function is responsible for creating an R object which contains the genetic variation data from the vcf file you specify:
+
+```{r}
+vcfDat <- loadVCF("ex.vcf")
+```
+
+The above function will create an S4 object with the attributes `species`, `contifInfo`, and `variantData`. These attributes will be set to values corresponding to the data from the specified vcf file.
+
+2. **plotPosition**
+The **plotPosition** function creates a plot of the variant data, plotting the frequencies of SNPs along a fixed position axis.
+The **plotPosition** requires only a vcfObject S4 Object (created by `loadVCF`) to plot.
+```{r}
+  plotPosition(vcfDat)
+```
+
