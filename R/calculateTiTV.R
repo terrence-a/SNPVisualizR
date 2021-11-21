@@ -7,7 +7,7 @@
 #' @export
 #'
 #' @examples
-#' vcfData <- loadVCF("inst/examples/text000.vcf)
+#' vcfData <- loadVCF("inst/examples/text000.vcf")
 #' calculateTiTv(vcfData)
 #'
 #' @references

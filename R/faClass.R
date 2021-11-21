@@ -1,6 +1,6 @@
 #' An S4 class to represent the contents of a FASTA file.
 #'
-#' @ title faObj
+#' @title faObj
 #'
 #' @description An S4 object which stores fasta file sequence data for use in the
 #' functions as a part of this package.

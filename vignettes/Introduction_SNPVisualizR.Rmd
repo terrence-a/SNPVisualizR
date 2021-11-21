@@ -28,7 +28,7 @@ library(SNPVisualizR)
 The following command lists all the sample functions available as a part of this package.
 
 ``` {r}
-ls("package:TestingPackage")
+ls("package:SNPVisualizR")
 ```
 
 ##Components
@@ -41,11 +41,24 @@ vcfDat <- loadVCF("ex.vcf")
 ```
 
 The above function will create an S4 object with the attributes `species`, `contifInfo`, and `variantData`. These attributes will be set to values corresponding to the data from the specified vcf file.
+**loadVCF** also accepts a `filesizelimit` argument, which can be used to select the first n line of vcf (to avoid having to wait for an entire vcf file to be read (default = $1^6$))
 
-2. **plotPosition**
+2. **loadFA**
+The **loadFA** function is responsible for creating an R object which contains sequence data from a specified fasta file.
+
+```{r}
+faDat <- loadFA("ex.fa")
+```
+3. **plotPosition**
 The **plotPosition** function creates a plot of the variant data, plotting the frequencies of SNPs along a fixed position axis.
 The **plotPosition** requires only a vcfObject S4 Object (created by `loadVCF`) to plot.
 ```{r}
   plotPosition(vcfDat)
 ```
 
+4. **calculateTiTv**
+The **calculateTiTv** function calculates the Transition/Transversion ratio of all the listed variants in the file.
+
+```{r}
+calculateTiTv(vcfDat)
+```

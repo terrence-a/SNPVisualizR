@@ -21,4 +21,14 @@ a summary table of counts and ratios.
 A function which calculates the Transition/Transversion ration for a sample
 of vcf entries given a vcfObj
 }
+\examples{
+vcfData <- loadVCF("inst/examples/text000.vcf")
+calculateTiTv(vcfData)
+
+}
+\references{
+Wang, Jing et al. “Genome measures used for quality control are dependent on
+gene function and ancestry.” Bioinformatics (Oxford, England) vol. 31,3
+(2015): 318-23. doi:10.1093/bioinformatics/btu668
+}
 \keyword{datasets}
