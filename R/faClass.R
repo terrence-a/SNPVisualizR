@@ -8,7 +8,7 @@
 #' @slot sequenceData A data table containing the sequence data for the fasta
 #' sequences.
 #'
-#'  @import data.table
+#'  @importFrom data.table data.table
 
 
 setClass("faObj",

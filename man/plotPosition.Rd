@@ -4,13 +4,7 @@
 \alias{plotPosition}
 \title{Function which plots the variants by their position on the chromosome.}
 \usage{
-plotPosition(
-  vcfInput,
-  sections = 300,
-  chrNames = c(),
-  colorBy = "chrom",
-  divideBy = "chrom"
-)
+plotPosition(vcfInput, sections = 300, colorBy = "chrom", divideBy = "chrom")
 }
 \arguments{
 \item{vcfInput}{A VCFObj S4 object which contains variant entries.}
@@ -22,8 +16,6 @@ plotPosition(
 postion colored by filter}
 
 \item{divideBy}{group variant entries and show position by group}
-
-\item{chrName}{a list of chromosome names to filter for.}
 }
 \description{
 Function which plots the variants by their position on the chromosome.

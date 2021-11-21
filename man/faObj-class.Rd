@@ -3,10 +3,13 @@
 \docType{class}
 \name{faObj-class}
 \alias{faObj-class}
-\title{An S4 class to represent the contents of a FASTA file.}
+\title{faObj}
 \description{
 An S4 object which stores fasta file sequence data for use in the
 functions as a part of this package.
+}
+\details{
+An S4 class to represent the contents of a FASTA file.
 }
 \section{Slots}{
 
@@ -14,6 +17,6 @@ functions as a part of this package.
 \item{\code{sequenceData}}{A data table containing the sequence data for the fasta
 sequences.
 
-@import data.table}
+@importFrom data.table data.table}
 }}
 

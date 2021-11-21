@@ -5,7 +5,6 @@
 #' @param vcfInput A VCFObj S4 object which contains variant entries.
 #' @param sections number of sections to include in the position plot
 #' (wrapper parameter for ggplot2's "bins")
-#' @param chrName a list of chromosome names to filter for.
 #' @param colorBy color variants by filter, showing percent variants'
 #' postion colored by filter
 #' @param divideBy group variant entries and show position by group
@@ -28,13 +27,12 @@
 #TODO Further options (color, seperations) Filter by chromosome by default.
 
 #For Roxygen global functions.
-plotPosition <- post <- ch <- NULL
+plotPosition <- pos <- ch <- NULL
 
 library(ggplot2)
 
 plotPosition <- function(vcfInput,
                          sections=300,
-                         chrNames=c(),
                          colorBy="chrom",
                          divideBy="chrom"){
 

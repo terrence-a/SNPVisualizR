@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 
 To download **SNPVisualizR** please use the following commands:
 
-```{r}
+```{r eval=FALSE}
 require("devtools")
 install_github("terrence-a/SNPVisualizR", build_vignettes = TRUE)
 library(SNPVisualizR)
@@ -27,7 +27,7 @@ library(SNPVisualizR)
 
 The following command lists all the sample functions available as a part of this package.
 
-``` {r}
+``` {r eval=FALSEr}
 ls("package:SNPVisualizR")
 ```
 
