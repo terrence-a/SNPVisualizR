@@ -3,8 +3,9 @@
 #' @name plotPosition
 #'
 #' @param vcfInput A VCFObj S4 object which contains variant entries.
-#' @param faInput Optional; a S4 object which contains the fa sequences.
-#' @param sections number of sections to include in the position plot ()
+#' @param sections number of sections to include in the position plot
+#' (wrapper parameter for ggplot2's "bins")
+#' @param chrName a list of chromosome names to filter for.
 #' @param colorBy color variants by filter, showing percent variants'
 #' postion colored by filter
 #' @param divideBy group variant entries and show position by group
@@ -31,11 +32,22 @@ plotPosition <- post <- ch <- NULL
 
 library(ggplot2)
 
-plotPosition <- function(vcfInput, faInput,
+plotPosition <- function(vcfInput,
                          sections=300,
+                         chrNames=c(),
                          colorBy="chrom",
                          divideBy="chrom"){
+
+
   if(colorBy == "chrom"){
-    ggplot(vcfInput@variantData, aes(fill=ch, x=pos)) + geom_histogram(bins=300, size=1)
+    ggplot(vcfInput@variantData, aes(fill=ch, x=pos)) +
+      geom_histogram(bins=sections, size=1)
   }
+
+  if(divideBy == "chrom"){
+    ggplot(vcfInput@variantData, aes(x=pos)) +
+      geom_histogram(bins=sections, size=1) +
+      facet_wrap(~ch)
+  }
+
 }

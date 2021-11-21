@@ -6,8 +6,8 @@
 \usage{
 plotPosition(
   vcfInput,
-  faInput,
   sections = 300,
+  chrNames = c(),
   colorBy = "chrom",
   divideBy = "chrom"
 )
@@ -15,14 +15,15 @@ plotPosition(
 \arguments{
 \item{vcfInput}{A VCFObj S4 object which contains variant entries.}
 
-\item{faInput}{Optional; a S4 object which contains the fa sequences.}
-
-\item{sections}{number of sections to include in the position plot ()}
+\item{sections}{number of sections to include in the position plot
+(wrapper parameter for ggplot2's "bins")}
 
 \item{colorBy}{color variants by filter, showing percent variants'
 postion colored by filter}
 
 \item{divideBy}{group variant entries and show position by group}
+
+\item{chrName}{a list of chromosome names to filter for.}
 }
 \description{
 Function which plots the variants by their position on the chromosome.
