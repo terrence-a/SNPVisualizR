@@ -1,27 +1,31 @@
 #' Loads the contents of the fasta file and returns a S4 object containing the
 #' sequence information as a data frame
 #'
+#' @name loadFA
+#'
 #' @param filepath A string path to the vcf file you would like to load. Please
 #' ensure that your file meets {specification something}
 #'
 #' @return an faObj containing the sequence data.
 #'
-#' @export loadFa
+#' @export loadFA
 #' @import methods
 #' @import data.table
 #' @import seqinr
 #'
 #' @examples
-#' faObj <- loadFA(vcfData <- loadVCF(
-#' system.file("extdata", 'test01.fa', package = "SNPVisualizR)))
+#' #fafile contains the relative path the file.
+#' fafile <- system.file("extdata", "test01.fa", package="SNPVisualizR")
+#' faObj <- loadFA(fafile)
 
-library(seqinr)
+filepath <- name <- NULL
 
-name <- NULL
+
 
 loadFA <- function(filepath) {
     faObject <- new("faObj")
-    fileContents <- read.fasta(filepath)
+    fafile <- filepath
+    fileContents <- seqinr::read.fasta(file = fafile, as.string=TRUE)
     #The number of annotations in the file.
 
     for(ite in 1:length(fileContents)){

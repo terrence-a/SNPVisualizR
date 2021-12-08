@@ -6,11 +6,12 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-\#\#Description SNPVisualizR is an R package for analysis, and
-integration of genetic variation data for use in R. SNPVisualizR allows
-users to load variant information from vcf files. SNPVisualizR seeks to
-provide an easy-to-use interface to work with variant information within
-R. R Version
+## Description
+
+SNPVisualizR is an R package for analysis, and integration of genetic
+variation data for use in R. SNPVisualizR allows users to load variant
+information from vcf files. SNPVisualizR seeks to provide an easy-to-use
+interface to work with variant information within R. R Version
 
 ## Installation
 
@@ -24,7 +25,7 @@ library("SNPVisualizR")
 
 To run the shinyApp: *Under Construction*
 
-\#\#Overview
+## Overview
 
 ``` r
 ls("package:SNPVisualizR")
@@ -85,7 +86,7 @@ Engineering*, 207-232. Springer Verlag, New York. ISBN :
 Wang, Jing et al. “Genome measures used for quality control are
 dependent on gene function and ancestry.” *Bioinformatics* (Oxford,
 England) vol. 31,3 (2015): 318-23. <doi:10.1093/bioinformatics/btu668>
-\# Acknowledgements
+\#\# Acknowledgements
 
 This package was developed as part of an assessment for 2021 BCB410H:
 Applied Bioinformatics, University of Toronto, Toronto, CANADA

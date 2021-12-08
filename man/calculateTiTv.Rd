@@ -2,8 +2,8 @@
 % Please edit documentation in R/calculateTiTV.R
 \name{calculateTiTv}
 \alias{calculateTiTv}
-\title{A function which calculates the Transition/Transversion ration for a sample
-of vcf entries given a vcfObj}
+\title{A function which calculated the Ti/Tv ratio for a sample of vcf entries
+given a vcfObj.}
 \usage{
 calculateTiTv(vcfObj)
 }
@@ -14,8 +14,13 @@ calculateTiTv(vcfObj)
 a summary table of counts and ratios.
 }
 \description{
-A function which calculates the Transition/Transversion ration for a sample
-of vcf entries given a vcfObj
+A function which calculates the Transition/Transversion ratio
+for a sample of vcf entries given a vcfObj
+}
+\examples{
+vcfData <- loadVCF(system.file("extdata", "text000.vcf", package="SNPVisualizR"))
+calculateTiTv(vcfData)
+
 }
 \references{
 Wang, Jing et al. “Genome measures used for quality control are dependent on

@@ -20,3 +20,12 @@ postion colored by filter}
 \description{
 Function which plots the variants by their position on the chromosome.
 }
+\examples{
+# First, load vcf data into variable.
+getwd()
+vcfData <- loadVCF(
+  system.file("extdata", 'text000.vcf', package = "SNPVisualizR")
+)
+plotPosition(vcfData)
+
+}

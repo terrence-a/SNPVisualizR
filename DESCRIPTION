@@ -2,9 +2,8 @@ Package: SNPVisualizR
 Title: What the Package Does (One Line, Title Case)
 Version: 0.1.0
 Authors@R: 
-    person("Terrence", "Amponsah", , "terrence.amponsah@mail.utoronto.ca", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+    person("Terrence", "Amponsah", , "terrence.amponsah@mail.utoronto.ca", role = c("aut", "cre"))
+Description: SNPVisualizR is an R packaged designed for simple integration and visualization of genetic variation data from .vcf files. SNP Visualizer allows the user to be able to load VCF file into an S4 object for use with further data manipulation. SNP Visualizer also produces a position plot for all variants described in vcf object and also is able to calculate the transition and transversion ratio for the entries. Although there may be some existing R packages with similar functionality, SNPVisualizR, seeks to provide users with a simple, easy to use interface, as well as a way to store and potentially manipulate genetic variant data.
 License: MIT + file LICENSE
 Depends: R (>= 3.1.0)
 Encoding: UTF-8
@@ -16,10 +15,11 @@ Imports:
     methods,
     seqinr,
     magrittr,
-    qpdf
+    shiny
 Suggests: 
     rmarkdown,
     knitr,
+    qpdf,
     testthat (>= 3.0.0)
 VignetteBuilder: knitr
 Config/testthat/edition: 3

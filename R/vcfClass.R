@@ -1,6 +1,6 @@
 #' An S4 class to represent a vcf file's variant data.
 #'
-#' @title vcfObj
+#' @name vcfObj
 #'
 #' @description An S4 object which stores the vcf entries for usee in the
 #' functions as a part of this package.
@@ -9,7 +9,6 @@
 #' @slot contigInfo A vector containing objects with the contig info.
 #' @slot variantData A data table containing the vcf entries.
 #'
-#' @export
 #' @import data.table
 
 library(data.table)
