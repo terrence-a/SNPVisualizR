@@ -15,7 +15,10 @@ An S4 class to represent the contents of a FASTA file.
 
 \describe{
 \item{\code{sequenceData}}{A data table containing the sequence data for the fasta
-sequences.
+sequences.}
+
+\item{\code{codonData}}{A data table containing the formatted codon data for the
+sequence
 
 @importFrom data.table data.table}
 }}

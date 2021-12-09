@@ -51,7 +51,7 @@ faDat <- loadFA("ex.fa")
 ```
 3. **plotPosition**
 The **plotPosition** function creates a plot of the variant data, plotting the frequencies of SNPs along a fixed position axis.
-The **plotPosition** requires only a vcfObject S4 Object (created by `loadVCF`) to plot.
+The **plotPosition** require a vcfObject S4 Object (created by `loadVCF`) to plot.
 ```{r eval=FALSE}
   plotPosition(vcfDat)
 ```

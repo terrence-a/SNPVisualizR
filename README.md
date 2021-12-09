@@ -23,7 +23,11 @@ devtools::install_github("terrence-a/SNPVisualizR")
 library("SNPVisualizR")
 ```
 
-To run the shinyApp: *Under Construction*
+To run the shinyApp:
+
+``` r
+SNPVisualizR::runSNPVisualizR()
+```
 
 ## Overview
 
@@ -62,7 +66,7 @@ makes use of the `seqinr` package’s `read.fasta` function. The
 *plotPosition* function uses the `ggplot2` package to create the
 graphics.
 
-# References
+## References
 
 R Core Team (2021) R: A language and environment for statistical
 computing. R Foundation for Statistical Computing, Vienna Austria.

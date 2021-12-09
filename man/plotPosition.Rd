@@ -4,7 +4,7 @@
 \alias{plotPosition}
 \title{Function which plots the variants by their position on the chromosome.}
 \usage{
-plotPosition(vcfInput, sections = 300, colorBy = "chrom", divideBy = "chrom")
+plotPosition(vcfInput, sections = 300, color, separate)
 }
 \arguments{
 \item{vcfInput}{A VCFObj S4 object which contains variant entries.}
@@ -12,20 +12,19 @@ plotPosition(vcfInput, sections = 300, colorBy = "chrom", divideBy = "chrom")
 \item{sections}{number of sections to include in the position plot
 (wrapper parameter for ggplot2's "bins")}
 
-\item{colorBy}{color variants by filter, showing percent variants'
-postion colored by filter}
+\item{color}{color variants by filter, showing percent variants'
+postion colored by filter. TRUE or FALSE}
 
-\item{divideBy}{group variant entries and show position by group}
+\item{separate}{group variant entries and show position by group TRUE or FALSE}
 }
 \description{
 Function which plots the variants by their position on the chromosome.
 }
 \examples{
 # First, load vcf data into variable.
-getwd()
 vcfData <- loadVCF(
   system.file("extdata", 'text000.vcf', package = "SNPVisualizR")
 )
-plotPosition(vcfData)
+plotPosition(vcfData, color=TRUE, separate=TRUE)
 
 }

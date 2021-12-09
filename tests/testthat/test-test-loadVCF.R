@@ -11,7 +11,7 @@ test_that("basic file loading (vcf)", {
 test_that("plot created with no error", {
   b <- loadVCF("text000.vcf")
 
-  expect_true(!is.null(plotPosition(b)))
+  expect_true(!is.null(plotPosition(b, color=TRUE, separate=FALSE)))
 
 })
 

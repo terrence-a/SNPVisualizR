@@ -5,16 +5,16 @@
 #' @param vcfInput A VCFObj S4 object which contains variant entries.
 #' @param sections number of sections to include in the position plot
 #' (wrapper parameter for ggplot2's "bins")
-#' @param colorBy color variants by filter, showing percent variants'
-#' postion colored by filter
-#' @param divideBy group variant entries and show position by group
+#' @param color color variants by filter, showing percent variants'
+#' postion colored by filter. TRUE or FALSE
+#' @param separate group variant entries and show position by group TRUE or FALSE
 #'
 #' @examples
 #' # First, load vcf data into variable.
 #' vcfData <- loadVCF(
 #'   system.file("extdata", 'text000.vcf', package = "SNPVisualizR")
 #' )
-#' plotPosition(vcfData)
+#' plotPosition(vcfData, color=TRUE, separate=TRUE)
 #'
 #' @export
 #' @import ggplot2
@@ -30,8 +30,8 @@ library(ggplot2)
 
 plotPosition <- function(vcfInput,
                          sections=300,
-                         color,
-                         separate){
+                         color= TRUE,
+                         separate = FALSE){
 
   if(color & separate){
     return(ggplot(vcfInput@variantData, aes(fill=ch, x=pos)) +
