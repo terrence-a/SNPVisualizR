@@ -28,11 +28,14 @@ loadFA <- function(filepath) {
     fileContents <- seqinr::read.fasta(file = fafile, as.string=TRUE)
     #The number of annotations in the file.
 
+    #ite allows iteration through the sequences found in the read.fasta result.
+    #To codon-ize it (since stringseq makes the sequence into a string) take seq
+    #and run it through the lovely function we saw earlier.
     for(ite in 1:length(fileContents)){
-      #
+      stringseq = toString(fileContents[[ite]])
       newFaSeq <- data.table(
         chrName = attr(fileContents[[ite]], "name"),
-        seq = toString(fileContents[[ite]])
+        seq = stringseq
       )
       faObject@sequenceData <- rbindlist(list(faObject@sequenceData, newFaSeq))
     }

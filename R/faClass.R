@@ -13,7 +13,8 @@
 
 setClass("faObj",
          slots = c(
-            sequenceData = "data.table"
+            sequenceData = "data.table",
+            codonData = "data.table,"
          ),
          prototype = list(
            sequenceData = data.table(chrName = character(), seq = character())
