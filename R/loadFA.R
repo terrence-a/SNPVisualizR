@@ -20,7 +20,9 @@
 
 filepath <- name <- NULL
 
+sepToCodon <- function(stringInput) {
 
+}
 
 loadFA <- function(filepath) {
     faObject <- new("faObj")

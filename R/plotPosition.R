@@ -11,7 +11,6 @@
 #'
 #' @examples
 #' # First, load vcf data into variable.
-#' getwd()
 #' vcfData <- loadVCF(
 #'   system.file("extdata", 'text000.vcf', package = "SNPVisualizR")
 #' )
@@ -31,19 +30,27 @@ library(ggplot2)
 
 plotPosition <- function(vcfInput,
                          sections=300,
-                         colorBy="chrom",
-                         divideBy="chrom"){
+                         color,
+                         separate){
 
-
-  if(colorBy == "chrom"){
-    ggplot(vcfInput@variantData, aes(fill=ch, x=pos)) +
-      geom_histogram(bins=sections, size=1)
+  if(color & separate){
+    return(ggplot(vcfInput@variantData, aes(fill=ch, x=pos)) +
+             geom_histogram(bins=sections, size=1) + facet_wrap(~ch))
   }
 
-  if(divideBy == "chrom"){
-    ggplot(vcfInput@variantData, aes(x=pos)) +
+  #default.
+  if(color){
+    return(ggplot(vcfInput@variantData, aes(fill=ch, x=pos)) +
+      geom_histogram(bins=sections, size=1))
+
+  }
+
+  if(separate){
+    return(ggplot(vcfInput@variantData, aes(x=pos)) +
       geom_histogram(bins=sections, size=1) +
-      facet_wrap(~ch)
+      facet_wrap(~ch))
   }
+
+
 
 }

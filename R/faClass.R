@@ -7,6 +7,8 @@
 #'
 #' @slot sequenceData A data table containing the sequence data for the fasta
 #' sequences.
+#' @slot codonData A data table containing the formatted codon data for the
+#' sequence
 #'
 #'  @importFrom data.table data.table
 
@@ -14,9 +16,10 @@
 setClass("faObj",
          slots = c(
             sequenceData = "data.table",
-            codonData = "data.table,"
+            codonData = "data.table"
          ),
          prototype = list(
-           sequenceData = data.table(chrName = character(), seq = character())
+           sequenceData = data.table(chrName = character(), seq = character()),
+           codonData = data.table(codon = character(), AA = character())
          )
          )
